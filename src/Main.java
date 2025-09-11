@@ -1,7 +1,7 @@
 import java.util.*;
 public class Main {
     static Scanner sc = new Scanner(System.in);
-    static ArrayList<String>  list = new ArrayList();
+    static ArrayList<String>  list = new ArrayList<>();
     public static void main(String[] args) {
 
         loop();
@@ -24,8 +24,11 @@ public class Main {
 
             loop();
         } else if (charac == 'C') {
-        int prompt = sc.nextInt();
-            list.remove(charac); loop();
+            System.out.println("REMOVE WHICH TASK?");
+            int prompt = sc.nextInt();
+            sc.nextLine();
+           list.remove(prompt);
+            loop();
         }
         else{
             System.out.println("FAILED");
