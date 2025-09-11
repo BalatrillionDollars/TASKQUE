@@ -16,12 +16,13 @@ public class Main {
         } else if (prompt == 'B') {
 
         } else if (prompt == 'C') {
-            remove()
+            remove();
         }
         else{
             System.out.println("FAILED");
             loop();
         }
+        loop();
     }
     public static void view() {
         int i = 0;
@@ -30,15 +31,15 @@ public class Main {
             i++;
         }
     }
+
     public static void remove() {
-        char prompt = sc.nextInt();
+        int prompt = sc.nextInt();
         list.remove(prompt);
     }
-    public static void view() {}
-
-    public static void addtask() {
-        System.out.println("What would you like to add?");
-        list.add(sc.nextline());
+    public static void add() {
+        System.out.println("ENTER TASK?");
+        String task = sc.next();
+        list.add(task);
     }
 
 }
