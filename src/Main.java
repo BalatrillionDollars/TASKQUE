@@ -34,4 +34,11 @@ public class Main {
         char prompt = sc.nextInt();
         list.remove(prompt);
     }
+    public static void view() {}
+
+    public static void addtask() {
+        System.out.println("What would you like to add?");
+        list.add(sc.nextline());
+    }
+
 }
