@@ -9,37 +9,31 @@ public class Main {
     }
     public static void loop() {
 
-        System.out.println("A: SEE TASKS B: ADD TASKS C: REMOVE TASK");
-        char prompt = sc.next().charAt(0);
-        if (prompt == 'A') {
-            view();
-        } else if (prompt == 'B') {
+        System.out.println("A: SEE TASKS B: ADD TASKS C: REMOVE TASK, ANYTHING ELSE: CLOSE PROGRAM");
+        char charac = sc.nextLine().charAt(0);
+        if (charac == 'A') {
+            int i = 0;
+            for (String x : list){
+                System.out.println(i + " " + x);
+                i++;
+            } loop();
+        } else if (charac == 'B') {
+            System.out.println("ENTER TASK?");
+            String task = sc.nextLine();
+            list.add(task);
 
-        } else if (prompt == 'C') {
-            remove();
+            loop();
+        } else if (charac == 'C') {
+        int prompt = sc.nextInt();
+            list.remove(charac); loop();
         }
         else{
             System.out.println("FAILED");
-            loop();
-        }
-        loop();
-    }
-    public static void view() {
-        int i = 0;
-        for (String x : list){
-            System.out.println(i + " " + x);
-            i++;
         }
     }
 
-    public static void remove() {
-        int prompt = sc.nextInt();
-        list.remove(prompt);
-    }
-    public static void add() {
-        System.out.println("ENTER TASK?");
-        String task = sc.next();
-        list.add(task);
-    }
+
+
+
 
 }
